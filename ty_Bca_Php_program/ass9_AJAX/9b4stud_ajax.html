@@ -1,0 +1,36 @@
+
+9.b4].Create student table as follows
+Student(sno, sname, per).
+Write Ajax program to select the student name and print the selected student’s details.
+
+<html>
+<head>
+<script type="text/javascript">
+  function stud()
+  {
+              var ob=false;
+              ob=new XMLHttpRequest();
+ 
+              var name=document.getElementById("name").value;
+ 
+              ob.open("GET","stud_ajax.php?name="+name);
+              ob.send();       
+ 
+              ob.onreadystatechange=function()
+              {
+                          if(ob.readyState==4 && ob.status==200)
+                          document.getElementById("stud").innerHTML=ob.responseText;            
+    }          
+  }
+ 
+</script>
+</head>
+
+<body>
+
+enter player name<input type="text" name="name" id="name">
+<input type=button value="submit" onClick="stud()"> 
+<span id="stud"></span>
+
+<body>
+</html>

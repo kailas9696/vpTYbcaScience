@@ -1,0 +1,39 @@
+<html>
+<!
+Define a class Employee having private members – id, name, department, salary. Define
+parameterized constructors. Create a subclass called “Manager” with private member bonus.
+Create 6 objects of the Manager class and display the details of the manager having the
+maximum total salary (salary + bonus).
+!>
+<body>
+<form action="d3.php" method="POST">
+Enter the LICENsEid:<input type="text" name="n1"><br>
+Enter the Name:<input type="text" name="n2"><br>
+Enter the Age:<input type="text" name="n3"><br>
+<input type="submit" value="submit">
+<input type="reset" value="reset">
+</form>
+</body>
+</html>
+
+
+php file;;;
+<?php
+$n1=$_POST['n1'];
+$n2=$_POST['n2'];
+$n3=$_POST['n3'];
+
+echo"the LICENSE_ID:".$n1."<br>";
+echo"the NAME:".$n2."<br>";
+echo"the Age:".$n3."<br>";
+if($n3>18)
+{
+ 
+ echo"the LICENSE_ID:".$n1."<br>the clientNAME:".$n2."<br>the Age:".$n3."<br>";
+}
+else
+{
+ echo"You are not authorized to ride";
+}
+?>
+

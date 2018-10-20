@@ -1,0 +1,33 @@
+1) Write a PHP script to accept an XML file which should comprise the following :
+<languages>
+<lang name="C">
+<appeared>1972</appeared>
+<creator>Dennis Ritchie</creator>
+</lang>
+</languages >
+For at least 5 records. Display the details of C language.
+---------------------------------------------------------
+
+<?xml version='1.0'?>
+<language>
+<lang name="c">
+<appeard>1972</appeard>
+<creator>dennies Ritchie</creator>
+</lang>
+<lang name="php">
+<appeard>1975</appeard>
+<creator>ABC</creator>
+</lang>
+<lang name="java">
+<appeard>1995</appeard>
+<creator>J.gosling</creator>
+</lang>
+<lang name="python">
+<appeard>1997</appeard>
+<creator>XYZ</creator>
+</lang>
+<lang name="vb.NET">
+<appeard>1988</appeard>
+<creator>zZZ</creator>
+</lang>
+</language>

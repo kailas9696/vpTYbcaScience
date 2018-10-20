@@ -1,0 +1,28 @@
+A Q1]Create a XML file which gives details of movies available in “Mayanagari CD Store” from
+following categories a) Classical b) Action c) Horror
+Elements in each category are in the following format
+<Category>
+<MovieName>----</MovieName>
+<ReleaseYear>----</ReleaseYear>
+</Category>
+Save the file with name “movies.xml”.
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Movie>
+<category>
+<Classical>
+<Title>kick</Title>
+<Release>2017</Release>
+</Classical>
+<Action>
+<Title>race</Title>
+<Release>2017</Release>
+</Action>
+<Horror>
+<Title>Black</Title>
+<Release>2016</Release>
+</Horror>
+</category>
+</Movie>
+
+

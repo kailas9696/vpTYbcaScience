@@ -1,0 +1,28 @@
+<html>
+   <!Write a PHP script using AJAX concept, to check user name and password are valid or Invalid (use
+     database to store user name and password).!>
+<head>
+<script type="text/javascript">
+  function Check()
+  {
+   var ob=false;
+   ob=new XMLHttpRequest();
+   var name=document.getElementById("name").value;
+   var password=document.getElementById("password").value;
+   ob.open("GET","9a5.php?name="+name+"&password="+password);
+   ob.send();        
+   ob.onreadystatechange=function()
+   {
+    if(ob.readyState==4 && ob.status==200)
+    document.getElementById("check").innerHTML=ob.responseText;       
+   }          
+  } 
+</script>
+</head>
+<body>
+Enter user name :<input type="text" name="name" id="name"><br>
+Enter password :<input type="password" name="password" id="password"><br>
+<input type=button name=submit value="submit" onClick="Check()"><br>
+<span id="check"></span>
+<body>
+</html>

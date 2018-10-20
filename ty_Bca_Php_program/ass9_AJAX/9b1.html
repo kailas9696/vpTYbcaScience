@@ -1,0 +1,33 @@
+ <html>
+  <!Create employee table as follows
+    EMP(eno, ename, designation, salary).
+    Write Ajax program to select the employees name and print the selected employee’s details.!>
+<head>
+<script type="text/javascript">
+ function get_emp(ename)
+{          
+            var ob=false;
+            ob=new XMLHttpRequest();
+            ob.onreadystatechange=function()
+            {
+                        if(ob.readyState==4 && ob.status==200)
+                        document.getElementById("place").innerHTML=ob.responseText;           
+            }
+            ob.open("GET","9b1.php?ename="+ename,true);
+            ob.send();
+}
+</script>
+</head>
+
+<body>
+Select Name Of Employee :
+<select name="ename" onchange="get_emp(this.value)">
+      <option value="">select emp</option>
+      <option value="rohit">rohit</option>
+      <option value="harish">harish</option>
+      <option value="raj">raj</option>
+</select>
+<div id="place"></div>
+</body>
+</html>
+

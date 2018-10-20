@@ -1,0 +1,32 @@
+<html>
+<head>
+<script type="text/javascript">
+function student()
+{
+
+ob=new XMLHttpRequest();
+
+var ob1=document.getElementById("pname").value;
+
+
+ob.open("GET","stud.php?pname="+ob1);
+ob.send();
+ob.onreadystatechange=function()
+{
+if(ob.readyState==4 && ob.status==200)
+document.getElementById("stud").innerHTML=ob.responseText;
+}
+}
+</script>
+<head>
+<body>
+enter the player name<input type="text" name="pname" id="pname"><br>
+
+<input type="submit" name="submit" onclick="student()">
+<span id="stud" ></span>
+</body>
+</html>
+
+
+
+

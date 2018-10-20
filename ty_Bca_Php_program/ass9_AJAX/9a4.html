@@ -1,0 +1,26 @@
+
+<html>
+   <!Write Ajax program to carry out validation for a username entered in textbox. If the textbox
+    is blank, print ‘Enter username’. If the number of characters is less than three,print’ Username
+    is too short’. If value entered is appropriate the print ‘Valid username’.!> <head>
+<script type="text/javascript">   
+  function val(str)
+       {
+        var ob=false;
+        ob=new XMLHttpRequest();
+        if(str=="")
+        document.getElementById("a").innerHTML="Username Should not be Empty<br>";               
+        else if(str.length<=3)
+        document.getElementById('a').innerHTML="username is too short<br>";       
+        else document.getElementById('a').innerHTML="valid username";
+        }
+</script>
+</head>
+<body>
+<form>
+Enter Username : <input type="text" name="u_name" id="u_name"><br>
+<input type="button" value="submit" onclick="val(form.u_name.value)">
+<span id=a></span><br>
+</body>
+</html>
+

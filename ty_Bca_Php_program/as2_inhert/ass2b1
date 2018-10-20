@@ -1,0 +1,60 @@
+
+<?php
+/*b1.Create class rectangle and derive a class square from class Rectangle. Create another class
+circle. Create an interface with only one method called area(). Implement this interface in all
+the classes. Include appropriate data members and constructors in all classes. W rite a program
+to accept details of a square, circle and rectangle and display the area.*/
+interfce Car
+{
+public function setmodel($name);
+public function getmodel();
+}
+class miniCar implements Car 
+{
+ private $model; 
+   
+  public function setModel($name)
+  { 
+    $this -> model = $name; 
+  }
+  
+  public function getModel()
+  {
+    return $this -> model; 
+  }
+}
+interface Vehicle
+ {
+  public function setHasWheels($bool); 
+ 
+  public function getHasWheels();
+}
+
+class miniCar implements Car, Vehicle 
+{
+  private $model; 
+  private $hasWheels; 
+  
+ public function setModel($name)
+  { 
+    $this -> model = $name; 
+  }
+  
+ public function getModel()
+  {
+    return $this -> model; 
+  }
+  
+ public function setHasWheels($bool)
+  { 
+    $this -> hasWheels = $bool; 
+  }
+  
+ public function getHasWheels()
+  {
+  return ($this -> hasWheels)? "has wheels" : "no wheels";
+  }
+}
+minicar $m=new minicar();
+$m->setmodel("ram");
+?>

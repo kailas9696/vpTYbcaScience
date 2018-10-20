@@ -1,0 +1,25 @@
+8.b2] Write a script to create “cricket.xml” file with multiple elements as shown below:
+<CricketTeam>
+<Team country="india">
+<player>____</player>
+<runs>______</runs>
+<wicket>____</wicket>
+</Team>
+</CricketTeam>
+Write a script to add multiple elements in “cricket.xml” file of category, country=”Australia”.
+
+<?xml version='1.0' encoding='UTF-8'?>
+<CricketTeam>
+<Team country="india">
+<player>dhoni</player>
+<runs>112</runs>
+<wicket>2</wicket>
+</Team>
+
+<Team country="australia">
+<player>virat</player>
+<runs>100</runs>
+<wicket>1</wicket>
+</Team>
+</CricketTeam>
+

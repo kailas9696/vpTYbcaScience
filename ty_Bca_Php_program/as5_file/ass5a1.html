@@ -1,0 +1,29 @@
+
+
+<html><title>file uploads</title>
+<body>
+<form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
+<input type="file" name="file1" id="file1">
+<input type="submit" name="submit">
+</form>
+
+<?php
+if(isset($_FILES['file1']))
+{
+  echo $_FILES['file1']['name'];
+  echo "<br>";
+  echo $_FILES['file1']['type'];
+  echo "<br>";
+  echo $_FILES['file1']['size'];
+  echo "<br>";
+}
+else
+{
+echo "select the ";
+
+}
+?>
+</body>
+</html>
+
+
